@@ -1,0 +1,282 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+}
+
+/* Header Styles */
+.main-header {
+    position: fixed; /* Keep the header at the top */
+    top: 0;
+    width: 100%; /* Full width */
+    background: #0d0d0d; /* Match the body background */
+    padding: 20px 40px; /* Add horizontal padding for spacing */
+    z-index: 1000; /* Ensure it stays above other elements */
+    display: flex;
+    justify-content: space-between; /* Align logo and navigation on opposite sides */
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5rem; /* Larger font size for the logo */
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Increase space between links */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem; /* Make the navigation text larger */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bfff; /* Change color on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex; /* Arrange items in a row */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align content vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 50px;
+    background: linear-gradient(145deg, #0d0d0d, #141414);
+    gap: 40px; /* Space between text and image */
+}
+
+.content {
+    max-width: 600px;
+    text-align: left; /* Align text to the left */
+}
+
+.content h1 {
+    font-size: 4rem; /* Large font size */
+    line-height: 1.2; /* Tight spacing between lines */
+    margin-bottom: 20px;
+}
+
+.content h1 span {
+    color: #00bfff; /* Highlighted color */
+}
+
+.content h2 {
+    font-size: 2.5rem; /* Subheading size */
+    color: #00bfff; /* Matching highlight color */
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2rem; /* Paragraph font size */
+    line-height: 1.6; /* Comfortable line height */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+.btn-group {
+    margin-top: 20px; /* Space above buttons */
+}
+
+.btn {
+    padding: 12px 30px; /* Button size */
+    font-size: 1rem; /* Button text size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+.btn.secondary {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #00bfff; /* Border matches highlight color */
+    color: #00bfff; /* Text matches highlight color */
+}
+
+.btn.secondary:hover {
+    background-color: #00bfff; /* Change to solid background on hover */
+    color: #fff; /* White text on hover */
+}
+
+.image-container {
+    max-width: 400px; /* Image width */
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%; /* Full width of container */
+    border-radius: 10px; /* Rounded corners */
+    border: 4px solid #00bfff; /* Highlighted border */
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #141414;
+}
+
+.portfolio-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Portfolio Item Hover Animations */
+.portfolio-item {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure content stays inside rounded corners */
+    position: relative; /* For positioning overlay elements */
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8); /* Enhanced shadow */
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Zoom in image */
+}
+
+.portfolio-item h2, .portfolio-item p {
+    position: relative; /* Ensures text follows item layout */
+    z-index: 2;
+}
+
+/* How to Order Section */
+.how-to-order-section {
+    background: linear-gradient(145deg, #1e1e1e, #282828);
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.how-to-order-section h1 {
+    font-size: 3rem;
+    color: #00bfff;
+    margin-bottom: 20px;
+}
+
+.how-to-order-section .subtitle {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.9);
+}
+
+.step-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00bfff;
+    background: #282828;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.step-content h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .image-container {
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        gap: 20px;
+    }
+
+    .step {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
